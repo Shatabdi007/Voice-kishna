@@ -467,6 +467,35 @@ input{outline:none;font-family:inherit}
 .spin-overlay.on{display:flex}
 .spin{width:48px;height:48px;border:4px solid rgba(255,255,255,.2);border-top-color:var(--g4);border-radius:50%;animation:rot .7s linear infinite}
 @keyframes rot{to{transform:rotate(360deg)}}
+
+.meta-wa-btn{
+  position:fixed;
+  bottom:90px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:14px 18px;
+  border-radius:50px;
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:bold;
+  box-shadow:0 8px 25px rgba(0,0,0,.3);
+  z-index:99999;
+  animation:float 2s infinite ease-in-out;
+}
+
+.meta-wa-btn:hover{
+  transform:scale(1.05);
+}
+
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-5px)}
+  100%{transform:translateY(0)}
+}
+
 </style>
 </head>
 <body>
@@ -721,7 +750,56 @@ input{outline:none;font-family:inherit}
       <button class="ni on" onclick="go('profile')"><span class="ico">👨‍🌾</span><span class="lbl">प्रोफ़ाइल</span></button>
     </div>
   </div>
+<!-- WhatsApp Floating Button -->
 
+<!-- META WHATSAPP BUTTON -->
+<a
+  href="https://wa.me/15556409485?text=नमस्ते%20VoiceKisan%20AI"
+  target="_blank"
+  class="meta-wa-btn"
+>
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+    width="22"
+  />
+  Chat on WhatsApp
+</a>
+
+<style>
+
+.whatsapp-btn {
+
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  background: #25D366;
+  color: white;
+
+  padding: 15px 22px;
+
+  border-radius: 50px;
+
+  text-decoration: none;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+
+  z-index: 9999;
+
+  transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+
+  transform: scale(1.05);
+
+  background: #1ebe5d;
+}
+
+</style>
   <!-- ████████████████ SCHEME MODAL ████████████████ -->
   <div class="overlay" id="modal" onclick="closeModal()">
     <div class="sheet" onclick="event.stopPropagation()" id="modal-sheet">
@@ -1160,3 +1238,4 @@ function cropEmoji(crop) {
 </script>
 </body>
 </html>
+
